@@ -4,23 +4,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 
+private const val TAG = "main_activity"
+
 class MainActivity2: AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
-        Log.d("main_activity", "Activity created")
+        Log.d(TAG, "Activity created")
     }
     override fun onPause() {
         super.onPause()
-        Log.w("main_activity", "Hi there")
+        Log.w(TAG, "Hi there")
     }
     override fun onResume() {
         super.onResume()
-        Log.e("main_activity", "This activity has been resumed")
+        Log.e(TAG, "This activity has been resumed")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.e("main_activity", "Activity has been destroyed")
+        Log.e(TAG, "Activity has been destroyed")
     }
 }
