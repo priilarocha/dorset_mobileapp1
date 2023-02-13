@@ -13,4 +13,4 @@
 - Buttons, onClick listeners
 - Code Refactoring
 - Kotlin String templates
-- Create new activity
+- Create new activity and navigate to it
