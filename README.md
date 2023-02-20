@@ -13,4 +13,13 @@
 - Buttons, onClick listeners
 - Code Refactoring
 - Kotlin String templates
-- Create new activity
+- Create new activity and navigate to it
+
+## Week 3
+- Logs
+- Activity Lifecycle
+- Back Stack
+- Navigation, Intent Flags and LaunchMode
+- Fragments
+- Connecting a physical device
+- Build debug APK, create Github release with APK
