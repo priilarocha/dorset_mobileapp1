@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item name="textViewsContainer" type="id" />
-    <item name="fragment_text" type="id" />
-    <item name="fragment_container_view" type="id">fragment_container_view</item>
-    <item name="fab" type="id">fab</item>
-</resources>
