@@ -5,6 +5,7 @@
     android:layout_margin="10dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/root_layout"
     tools:context=".MainActivity">
 
     <TextView
@@ -16,7 +17,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
+
 
         <EditText
             android:id="@+id/nameEditText"
@@ -38,8 +40,7 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:name="com.example.mobileapps1.ExampleFragment" />
+        android:layout_height="wrap_content" />
 
     <TextView
         android:layout_weight="1"
@@ -47,11 +48,11 @@
         android:padding="10dp"
         android:text="@string/welcome_name_text"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"/>
+        android:layout_height="0dp" />
 
     <Button
         android:id="@+id/nextPageButton"
-        android:text="@string/go_to_next_page"
+        android:text="@string/next_page_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
