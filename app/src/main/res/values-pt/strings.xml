@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Mobile Apps 1</string>
+    <string name="hello_dorset">Ola Dorset</string>
+    <string name="welcome_name_text">Bem-vindo!</string>
+    <string name="enter_your_name_here">Digite seu nome</string>
+    <string name="save_button">Salvar</string>
+    <string name="next_page_button">Próxima página</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Ola fragmento em branco</string>
+    <string name="link_action_button">Link Botao de acao</string>
+    <string name="link_example_icon">Link Icone exemplo</string>
+    <string name="contact_image">Contato Imagem</string>
+</resources>
