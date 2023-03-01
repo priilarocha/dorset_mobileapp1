@@ -10,4 +10,5 @@
     <string name="link_action_button">Link Botao de acao</string>
     <string name="link_example_icon">Link Icone exemplo</string>
     <string name="contact_image">Contato Imagem</string>
+    <string name="change_data">Mudar dados</string>
 </resources>

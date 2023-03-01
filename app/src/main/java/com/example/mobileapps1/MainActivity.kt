@@ -12,11 +12,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.os.bundleOf
-import androidx.fragment.app.add
-import androidx.fragment.app.commit
+import androidx.appcompat.content.res.AppCompatResources
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,14 +49,6 @@ class MainActivity : AppCompatActivity() {
             }
             sb.show()
 
-            if (savedInstanceState == null) {
-                supportFragmentManager.commit {
-                    val bundle = bundleOf("username" to "Inside fragment: $nameText")
-                    setReorderingAllowed(true)
-                    add<SampleFragment>(R.id.fragment_container_view, args = bundle)
-                }
-            }
-
             Log.i("MainAct", "Text entered $nameText")
             if (nameText.toString() == "Hide") {
                 Log.i("MainAct", "Inside Hide if")
@@ -64,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW).apply {
-                data = Uri.parse("https://github.com/priilarocha/dorset_mobileapp1")
+                data = Uri.parse("https://github.com/saravanabalagi/dorset_mobileApps1")
             }
             startActivity(intent)
         }
@@ -74,9 +69,25 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
+
+        val exampleViewPager = findViewById<ViewPager2>(R.id.exampleViewPager)
+        exampleViewPager.adapter = object: FragmentStateAdapter(this) {
+            override fun getItemCount() = 3
+            override fun createFragment(position: Int): Fragment = SampleFragment().apply {
+                arguments = Bundle().apply {
+                    putString("username", "This is page ${position + 1}")
+                }
+            }
+        }
+        val exampleTabLayout = findViewById<TabLayout>(R.id.exampleTabLayout)
+        TabLayoutMediator(exampleTabLayout, exampleViewPager) { tab, position ->
+            tab.text = "Page ${position + 1}"
+            val rId = if (position == 0) R.drawable.baseline_insert_link_24 else R.drawable.baseline_person_24
+            tab.icon = AppCompatResources.getDrawable(this, rId)
+        }.attach()
     }
 
-    fun View.hideKeyboard() {
+    private fun View.hideKeyboard() {
         val inputManager = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputManager.hideSoftInputFromWindow(windowToken, 0)
     }

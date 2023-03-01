@@ -12,9 +12,7 @@ class ContactAdapter(private val contactArray: Array<Contact>): RecyclerView.Ada
         return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return contactArray.size
-    }
+    override fun getItemCount() = contactArray.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.nameTextView.text = contactArray[position].name
