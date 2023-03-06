@@ -23,7 +23,7 @@
 - Fragments
 - Connecting a physical device
 - Build debug APK, create Github release with APK
-[app release](https://github.com/priilarocha/dorset_mobileapp1)
+[app release](https://github.com/priilarocha/dorset_mobileapp1/releases/tag/app)
 
 ## Week 4
 - SnackBar with Action
