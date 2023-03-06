@@ -10,4 +10,7 @@
     <string name="link_action_button">Link Botao de acao</string>
     <string name="link_example_icon">Link Icone exemplo</string>
     <string name="contact_image">Contato Imagem</string>
+    <string name="change_data">Mudar dados</string>
+    <string name="fragment_image">Fragmento da Imagem</string>
+    <string name="image_credits_thispersondoesnotexist_xyz">Creditos da imagem: thispersondoesnotexist.xyz</string>
 </resources>
